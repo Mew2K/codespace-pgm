@@ -1,15 +1,19 @@
 {
     "name": "Minecraft Server",
+    "features": {
+      "ghcr.io/devcontainers/features/git:1": {}
+    },
     "dockerFile": "Dockerfile",
     "forwardPorts": [25565],
-    "postCreateCommand": "chmod +x start.sh && ./start.sh",
+    "postCreateCommand": "chmod +x .devcontainer/start.sh && .devcontainer/start.sh",
     "customizations": {
       "vscode": {
         "settings": {
           "terminal.integrated.defaultProfile.linux": "bash"
         },
         "extensions": [
-          "ms-vscode-remote.remote-containers"
+          "ms-vscode-remote.remote-containers",
+          "ms-azuretools.vscode-docker"
         ]
       }
     }
