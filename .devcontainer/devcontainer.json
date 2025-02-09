@@ -1,0 +1,16 @@
+{
+    "name": "Minecraft Server",
+    "dockerFile": "Dockerfile",
+    "forwardPorts": [25565],
+    "postCreateCommand": "chmod +x start.sh && ./start.sh",
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "bash"
+        },
+        "extensions": [
+          "ms-vscode-remote.remote-containers"
+        ]
+      }
+    }
+  }
